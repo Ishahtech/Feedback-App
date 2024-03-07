@@ -1,12 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Header from "./Component/Layout/Header";
-import Home from "./components/Pages/Home";
-import Review from "./components/Pages/Review";
-import About from "./components/Pages/About";
 import data from "./data/reviewData";
 import ReviewList from "./Component/ReviewList";
 import ReviewStats from "./Component/ReviewStats";
+import ReviewForm from "./Component/ReviewForm";
 
 
 function App() {
@@ -22,19 +19,18 @@ function App() {
   return (
     <>
       <Header text="Review Application" />
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
         </Routes>
-      </Router>
+      </Router> */}
 
-
-      <div className="container">
+    <div className="container">
+        <ReviewForm />
         <ReviewStats reviews={review} />
         <ReviewList reviews={review} deleteReview={deleteReview} />
-
       </div>  
     </>
   );
