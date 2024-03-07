@@ -1,11 +1,6 @@
 import Reviewitem from "./Reviewitem";
 
-function ReviewList({ reviews }) {
-  const deleteReview = (id) => {
-    if (window.confirm("Are you sure you want to delete this review")) {
-        setReview(reviews.filter((item) => item.id !== id));
-    }    
-  };
+function ReviewList({ reviews, deleteReview }) {
 
   if (!reviews || reviews.length === 0) {
     return <p>No review yet!</p>;
