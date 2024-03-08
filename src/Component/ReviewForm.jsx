@@ -15,9 +15,8 @@ function ReviewForm() {
             <h3>Kindly drop a review for our service you just experienced.</h3>
             <div className="input-group">
                 <input type="text" value={text} placeholder="write our review here" onChange={textHandler} />
-                <button type="submit">Submit</button>
-                <Button type={submit} variant={primary}>
-
+                <Button type='submit' variant='secondary'>
+                    Submit
                 </Button>
 
             </div>
