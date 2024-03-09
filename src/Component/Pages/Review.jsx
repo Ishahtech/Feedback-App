@@ -2,9 +2,9 @@
 
 function Review() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Review</h1> 
+    </>
   )
 }
 

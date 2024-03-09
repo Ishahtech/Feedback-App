@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./Component/Layout/Header";
+import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import data from "./data/reviewData";
 import ReviewList from "./Component/ReviewList";
 import ReviewStats from "./Component/ReviewStats";
@@ -25,13 +26,13 @@ function App() {
   return (
     <>
       <Header text="Review Application" />
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
         </Routes>
-      </Router> */}
+      </Router>
 
     <div className="container">
         <ReviewForm handleAdd={AddReview} />
