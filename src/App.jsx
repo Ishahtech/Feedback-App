@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Header from "./Component/Layout/Header";
-import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
+// import { BrowserRouter, Routes,Route } from "react-router-dom";
 import data from "./data/reviewData";
 import ReviewList from "./Component/ReviewList";
 import ReviewStats from "./Component/ReviewStats";
 import ReviewForm from "./Component/ReviewForm";
 import { v4 as uuid } from 'uuid';
+
 
 
 function App() {
@@ -26,13 +27,13 @@ function App() {
   return (
     <>
       <Header text="Review Application" />
-      <Router>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
         </Routes>
-      </Router>
+      </BrowserRouter> */}
 
     <div className="container">
         <ReviewForm handleAdd={AddReview} />

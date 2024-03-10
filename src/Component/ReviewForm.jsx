@@ -4,8 +4,8 @@ import Rating from "./Rating";
 
 const spanStyle = {
   display: 'block',
-fontStyle: 'italic',
-marginTop: '10px'
+  fontStyle: 'italic', 
+  marginTop: '10px'
 }
 
 function ReviewForm({handleAdd}) {
@@ -27,16 +27,17 @@ function ReviewForm({handleAdd}) {
         setBtnDisabled(true)  //disable button
         setMsg(null) //do not display message
       } else if(text !== '' && text.trim().length <=20){
-        setMsg('your review must be above 20characters') //display message
+        setMsg('your review must be above 20 characters') //display message
         setBtnDisabled(true) //disable button
       } else {
         setMsg(null) //do not display message
-        setBtnDisabled(false)  //do not disable button
+        setBtnDisabled(false)  //enable button
       }
 
         setText(e.target.value)
     }
 
+    // function to submit a review
     const formSubmit = (e) => {
       e.preventDefault()
       if (text.trim().length >20){
@@ -48,6 +49,7 @@ function ReviewForm({handleAdd}) {
         setText('')
       }
     }
+
   return (
     <>
       <div className="container">
@@ -57,7 +59,7 @@ function ReviewForm({handleAdd}) {
             <Rating ratingState={(rating) => setRating(rating)} />
             <br /> <br />
             <div className="input-group">
-                <input type="text" value={text} placeholder="write our review here" onChange={textHandler} />
+                <input type="text" value={text} placeholder="write your review here" onChange={textHandler} />
                 
                 <Button type='submit' variant='secondary' isDisabled={btnDisabled}>
                     Submit
