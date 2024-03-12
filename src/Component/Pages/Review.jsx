@@ -62,7 +62,20 @@ function Review({ setReview, review }) {
           See All Reviews
         </Button>
       </div>
+
+      <div className="container">
+        <Button
+          type="button"
+          variant="secondary"
+          onClick={() => navigate("/all-reviews")}
+        >
+          See All Reviews
+        </Button>
+      </div>
       </ReviewProvider>
+
+       
+     
     </>
 
   );
